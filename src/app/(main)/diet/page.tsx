@@ -10,7 +10,7 @@ const Page = async (props: Props) => {
   const user = await clerkClient.users.getUser(userId);
 
   if (!user) return null;
-  return <div>Page</div>;
+   return <div>Page</div>;
 };
 
 export default Page;
