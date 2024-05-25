@@ -13,7 +13,7 @@ export function Header() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
 
   return (
-    <Box pb={120}>
+    <Box>
       <HeaderWrapper>
         <MantineHeader>
           <Nav>
