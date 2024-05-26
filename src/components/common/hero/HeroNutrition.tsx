@@ -4,12 +4,14 @@ import React from 'react';
 
 import { heroNutritionUrl } from '@/utils/constants';
 import { Button, Container, Overlay, Text, Title, rem } from '@mantine/core';
+import { useRouter } from 'next/navigation';
 
 import { HeroContainer } from './Hero.styles';
 
 type Props = {};
 
 const HeroNutrition = (props: Props) => {
+  const router = useRouter();
   return (
     <HeroContainer $backgroundUrl={heroNutritionUrl}>
       <Overlay
@@ -37,7 +39,13 @@ const HeroNutrition = (props: Props) => {
           customizable components and hooks to cover you in any situation
         </Text>
 
-        <Button variant="gradient" size="xl" radius="xl" mt="calc(var(--mantine-spacing-xl) * 1.5)">
+        <Button
+          variant="gradient"
+          size="xl"
+          radius="xl"
+          mt="calc(var(--mantine-spacing-xl) * 1.5)"
+          onClick={() => router.replace('/diet')}
+        >
           Get started
         </Button>
       </Container>

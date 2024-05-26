@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <ClerkProvider appearance={{ baseTheme: dark }}>
       <main className="h-full">
-        <Header />
+       
         {children}
       </main>
     </ClerkProvider>

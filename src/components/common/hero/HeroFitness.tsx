@@ -4,12 +4,14 @@ import React from 'react';
 
 import { heroFitnessUrl } from '@/utils/constants';
 import { Button, Container, Overlay, Text, Title, rem } from '@mantine/core';
+import { useRouter } from 'next/navigation';
 
 import { HeroContainer } from './Hero.styles';
 
 type Props = {};
 
 const HeroFitness = (props: Props) => {
+  const router = useRouter();
   return (
     <HeroContainer $backgroundUrl={heroFitnessUrl}>
       <Overlay
@@ -45,7 +47,12 @@ const HeroFitness = (props: Props) => {
           customizable components and hooks to cover you in any situation
         </Text>
 
-        <Button variant="white" size="lg" mt="calc(var(--mantine-spacing-xl) * 1.5)">
+        <Button
+          variant="white"
+          size="lg"
+          mt="calc(var(--mantine-spacing-xl) * 1.5)"
+          onClick={() => router.replace('/workout')}
+        >
           Get started
         </Button>
       </Container>
